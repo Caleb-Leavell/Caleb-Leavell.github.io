@@ -136,3 +136,9 @@ a:visited {
 a:hover {
         color: #6d97c7;
 }
+
+footer {
+    grid-area: footer; /* place the footer into the footer area of the #wrapper grid */
+    text-align: center;
+    padding: 1em;
+}
