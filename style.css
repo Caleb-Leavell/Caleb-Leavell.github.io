@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin-left: 2em;
+    margin-right: 2em;
+    color: #eff1f4;
+    background-color: #101419;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 25em auto;
+    grid-template-rows: auto auto auto auto;
+
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "about-me project-highlight"
+        "footer footer"
+}
+
+header {
+    border-radius: 10px;
+    background-color: #111c2e;
+    grid-area: header;
+    margin-bottom: 1em;
+}
+
+#header-content {
+    padding-top: 1px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1px;
+}
+
+nav {
+    border-radius: 10px;
+    background-color: #174d8b;
+    line-height: 2.5em;
+    height: 2.5em;
+    grid-area: nav;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+nav a:link {
+    color: #eff1f4;
+}
+
+nav a:visited {
+    color: #eff1f4;
+}
+
+nav a:hover {
+    color: #4c6074;
+}
+
+nav ul {
+    list-style-type: none;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+main {
+    display: contents;
+}
+
+#about-me,
+#project-highlight-container {
+    border-radius: 10px;
+    margin-top: 1em;
+    background-color: #1e3355;
+    height: 40em;
+}
+
+#about-me {
+    grid-area: about-me;
+    line-height: 2em;
+    margin-right: 1em;
+    background-color: #111c2e;
+}
+
+#project-highlight-container {
+    grid-area: project-highlight;
+    overflow-y: auto;
+}
+
+#project-highlight-1-img {
+    width: 20em;
+    max-width: 720px;
+    background-image: url(res/jatui.png);
+    min-height: 10em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* scale the image to fill the box (may crop) */
+    display: block;
+}
+
+#project-highlight-3-img {
+    width: 20em;
+    height: 20em;
+    max-width: 720px;
+    background-image: url(res/paint.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* scale to fill */
+    display: block;
+}
+
+.content {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+a:link {
+        color: #587eb8;
+}
+
+a:visited {
+        color: #6258b8;
+}
+
+a:hover {
+        color: #6d97c7;
+}

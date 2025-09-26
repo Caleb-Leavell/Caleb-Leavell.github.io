@@ -1,14 +1,119 @@
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <title>Caleb Leavell</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <h1 class="title">Caleb Leavell</h1>
-        <h2 class="subtitle">portfolio</h2>
-        <p>Caleb Leavell is a Computer Science student at Arizona State University</p>
-        <br><br>
-        <p><strong>Note:</strong>This portofolio site is still a work in progress</p>
-    </body>
 
+    <body>
+        <div id="wrapper">
+            <header>
+                <div id="header-content">
+                    <h1>Caleb Leavell</h1>
+                    <p>
+                        Computer Science Student at ASU, with experience in fast-paced
+                        and adaptive environments;
+                    </p>
+                </div>
+            </header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="./skills.html">Skills</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                <div id="about-me">
+                    <div class="content">
+                        <h2>About Me</h2>
+                        <p>
+                            Caleb Leavell grew up in the Phoenix valley. 
+                            After completing high school with 2 Associate's
+                            Degrees through the Dual Enrollment Program,
+                            he is currently attending Arizona State University
+                            and is currently completing the senior year of his
+                            Bachelor's Degree in Computer Science (BS). <br><br>
+                            Caleb is also currently following the Accelerated
+                            Program Track which will allow him to complete his
+                            Master's Degree in Computer Science (MS) within a 
+                            year after completing his undergraduate program.
+                            He will be completing at least 12 credits towards
+                            the graduate program in his senior year.
+                        </p>
+                    </div>
+                </div>
+                <div id="project-highlight-container">
+                    <div class="content">
+                        <h2>Project Highlights</h2>
+                        <div id="project-highlight-1" class="highlighted-project">
+                            <h3>Jatui</h3>
+                            <div id="project-highlight-1-img"></div>
+                            <ul>
+                                <li>
+                                    Developed and deployed a Java TUI library with a modular, ANSI-supported UI class system,
+                                    enabling faster and more scalable command-line UI development for other developers.
+                                </li>
+                                <li>
+                                    Implemented custom TUI module templating, logic attachment to input collectors, and a robust
+                                    directed graph module layout with recursive property propagation functionality
+                                </li>
+                                <li>
+                                    Utilized the Builder and Static Factory design patterns, reflection, and functional programming.
+                                </li>
+                                <li>
+                                    Utilized the Builder and Static Factory design patterns, reflection, and functional programming.
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="project-highlight-2" class="highlighted-project">
+                            <h3>Personal Finance App</h3>
+                            <div id="project-highlight-2-img"></div>
+                            <ul>
+                                <li>
+                                    Worked in a team of 3 to build and deploy a personal finance web application that allowed
+                                    registered users to view their net worth over time and get the latest stock news.
+                                </li>
+                                <li>
+                                    Built the application using the .NET framework and followed a microservice architecture that
+                                    integrated third-party and custom RESTful/WSDL APIs.
+                                </li>
+                                <li>
+                                    Implemented a custom XML/XSD user database with password encryption.                                
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="project-highlight-3" class="highlighted-project">
+                            <h3>Paint</h3>
+                            <div id="project-highlight-3-img"></div>
+                            <ul>
+                                <li>
+                                    Built and deployed a paint program in PyGame, including features such as undo/redo, a
+                                    continuous line system, and rendering optimizations that reduced time complexity from O(n^2) to
+                                    O(1) by only rendering new changes, while full redraws (e.g., after an undo) remained O(n^2).
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+            <footer>
+                    <p><a href="mailto:cleavel1@asu.edu">cleavel1@asu.edu</a></p>
+            </footer>
+        </div>
+    </body>
 </html>
+
