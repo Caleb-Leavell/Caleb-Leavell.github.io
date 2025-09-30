@@ -13,17 +13,6 @@ body {
     scrollbar-width: thin;
 }
 
-#wrapper {
-    display: grid;
-    grid-template-columns: 25em auto;
-    grid-template-rows: auto auto auto auto;
-
-    grid-template-areas:
-        "header header"
-        "nav nav"
-        "about-me project-highlight"
-        "footer footer"
-}
 
 h3 {
     font-weight: 200;
@@ -41,7 +30,6 @@ h1, h2, h3 {
 }
 
 header {
-
     grid-area: header;
     margin-bottom: 1em;
 }
@@ -103,11 +91,11 @@ main {
 #about-me,
 #project-highlight-container {
     margin-top: 1em;
-    height: 40em;
     line-height: 2em;
 }
 
 #about-me {
+    padding-top: 0.1em;
     border-radius: 5px 5px 5px 10px;
     grid-area: about-me;
     margin-right: 1em;
@@ -120,17 +108,6 @@ main {
     background-color: rgba(17, 28, 46, 0.5);
     overflow-y: auto;
 }
-
-@media(min-width: 1280px) {
-    #project-highlights {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-template-areas: "project-highlight-1 project-highlight-2 project-highlight-3";
-        gap: 1em;
-        align-items: start;
-    }
-}
-
 .highlighted-project {
     padding: 0.5em;
     margin-bottom: 1.5em;
@@ -143,14 +120,11 @@ main {
 }
 
 .highlighted-project .content {
-    height: 33em;
-
     overflow-x: hidden; 
     overflow-wrap: anywhere;
     word-break: break-word;
     white-space: normal;
 }
-
 #project-highlight-1 {
     border-radius: 10px 5px 5px 10px;
     grid-area: project-highlight-1;
@@ -206,4 +180,33 @@ footer {
     margin-right: auto;
     background-color: rgba(26, 36, 53, 0.3);
     border-radius: 15px;
+}
+
+@media(min-width: 1280px) {
+    #wrapper {
+        display: grid;
+        grid-template-columns: 25em auto;
+        grid-template-rows: auto auto auto auto;
+
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "about-me project-highlight"
+            "footer footer"
+    }
+
+    #project-highlights {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-areas: "project-highlight-1 project-highlight-2 project-highlight-3";
+        gap: 1em;
+        align-items: start;
+    }
+
+    #about-me, #project-highlight-container {
+        height: 40em;
+    }
+    .highlighted-project .content {
+        height: 33em;  
+    }
 }
