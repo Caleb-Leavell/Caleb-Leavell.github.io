@@ -61,7 +61,7 @@ header {
 
 nav {
     border-radius: 5px 5px 5px 5px;
-    background-color: rgba(26, 36, 53, 0.5);
+    background-color: rgba(26, 36, 53, 0.3);
     line-height: 2.5em;
     height: 2.5em;
     grid-area: nav;
@@ -169,7 +169,7 @@ main {
 #project-highlight-1-img,
 #project-highlight-2-img,
 #project-highlight-3-img {
-    width: 100%;
+    width: 50%;
     aspect-ratio: 4 / 3; /* pick a ratio close to your image’s real one */
     background-position: center;
     background-repeat: no-repeat;
@@ -178,7 +178,7 @@ main {
 }
 
 #project-highlight-1-img { background-image: url(res/jatui.png); }
-#project-highlight-2-img { background-image: url(res/personal-finance.png); }
+#project-highlight-2-img { background-image: url(res/finance.svg); }
 #project-highlight-3-img { background-image: url(res/paint.png); }
 
 a:link {
