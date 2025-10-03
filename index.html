@@ -9,14 +9,17 @@
     </head>
 
     <body>
-        <div id="wrapper">
+        <div id="home-wrapper" class="wrapper">
             <header>
                 <div id="header-content" class="container">
-                    <h1>Caleb Leavell</h1>
-                    <p id="headline">
-                        Computer Science Student at ASU, with experience in fast-paced
-                        and adaptive environments.
-                    </p>
+                    <div class="content">
+                        <h1>Caleb Leavell</h1>
+                            <p id="headline">
+                                Computer Science Student at ASU, with experience in fast-paced
+                                and adaptive environments.
+                            </p>
+                    </div>
+ 
                 </div>
             </header>
             <nav class="container">
@@ -36,6 +39,35 @@
                 </ul>
             </nav>
             <main>
+                <div id="project-highlight-container" class="container">
+                    <div class="content">
+                        <h2>Project Highlight - Jatui</h2>
+                        <div id="project-1-container" class="project-container container"> 
+                            <div class="content">
+                                <h4>2023 - 2025</h4>
+                                <div id="project-1-img" class="project-img"></div>
+                                <p>
+                                    Existing TUI libraries generally target raw terminals (handle user input every time a key is pressed). 
+                                    However, there are many applications that are simple enough to live in the default cooked terminal 
+                                    (handle user input when the user presses enter). Examples of these applications are:
+                                </p>
+                                <ul>
+                                    <li><strong>CLI Wizards</strong> (installation, configuration, setup flows)</li>
+                                    <li><strong>Menu-Driven Tools</strong> (interactive scripts, database helpers, git interfaces)</li>
+                                    <li><strong>Logic Prototyping</strong> (quickly testing algorithms or workflows)</li>
+                                    <li><strong>Simple REPLs</strong> (read-eval-print loops that don't need per-keystroke input)</li>
+                                    <li><strong>Text Adventures &amp; Games</strong> (turn-based input works well in cooked mode)</li>
+                                </ul>
+                                <p>
+                                    Jatui is a Java library that provides a framework for building TUIs that are meant to run in a 
+                                    cooked-terminal environment by implementing a modularized, declarative system that allows for reusable, 
+                                    customizable, and analyzable application units.
+                                </p>
+                            </div>
+                        </div>
+                        <a href="./projects.html" class="button-link"><strong>View More Projects</strong></a>
+                    </div>
+                </div>
                 <div id="about-me" class="container">
                     <div class="content">
                         <h2>About Me</h2>
@@ -44,7 +76,7 @@
                             After completing high school with 2 Associate's
                             Degrees through the Dual Enrollment Program,
                             he is currently attending Arizona State University
-                            and is currently completing the senior year of his
+                            and is completing the senior year of his
                             Bachelor's Degree in Computer Science (BS). <br><br>
                             Caleb is also currently following the Accelerated
                             Program Track which will allow him to complete his
@@ -53,73 +85,7 @@
                             He will be completing at least 12 credits towards
                             the graduate program in his senior year.
                         </p>
-                    </div>
-                </div>
-                <div id="project-highlight-container" class="container">
-                    <div class="content">
-                        <h2>Project Highlights</h2>
-                        <div id="project-highlights">
-                            <div id="project-highlight-1" class="highlighted-project container">
-                                <div class="content">
-                                    <h3>Jatui</h3>
-                                    <hr>
-                                    <div id="project-highlight-1-img"></div>
-                                    <hr>
-                                    <ul>
-                                        <li>
-                                            Developed and deployed a Java TUI library with a modular, ANSI-supported UI class system,
-                                            enabling faster and more scalable command-line UI development for other developers.
-                                        </li>
-                                        <li>
-                                            Implemented custom TUI module templating, logic attachment to input collectors, and a robust
-                                            directed graph module layout with recursive property propagation functionality
-                                        </li>
-                                        <li>
-                                            Utilized the Builder and Static Factory design patterns, reflection, and functional programming.
-                                        </li>
-                                        <li>
-                                            Authored over 150 unit/integration tests in JUnit to ensure edge-case reliability
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div id="project-highlight-2" class="highlighted-project container">
-                                <div class="content">
-                                    <h3>Personal Finance App</h3>
-                                    <hr>
-                                    <div id="project-highlight-2-img"></div>
-                                    <hr>
-                                    <ul>
-                                        <li>
-                                            Worked in a team of 3 to build and deploy a personal finance web application that allowed
-                                            registered users to view their net worth over time and get the latest stock news.
-                                        </li>
-                                        <li>
-                                            Built the application using the .NET framework and followed a microservice architecture that
-                                            integrated third-party and custom RESTful/WSDL APIs.
-                                        </li>
-                                        <li>
-                                            Implemented a custom XML/XSD user database with password encryption.                                
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div id="project-highlight-3" class="highlighted-project container">
-                                <div class="content">
-                                    <h3>Paint</h3>
-                                    <hr>
-                                    <div id="project-highlight-3-img"></div>
-                                    <hr>
-                                    <ul>
-                                        <li>
-                                            Built and deployed a paint program in PyGame, including features such as undo/redo, a
-                                            continuous line system, and rendering optimizations that reduced time complexity from O(n^2) to
-                                            O(1) by only rendering new changes, while full redraws (e.g., after an undo) remained O(n^2).
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="./contact.html" class="button-link"><strong>Get In Contact</strong></a>
                     </div>
                 </div>
             </main>

@@ -9,15 +9,20 @@
     </head>
 
     <body>
-        <div id="wrapper">
+        <div id="projects-wrapper" class="wrapper">
             <header>
-                <h1>Caleb Leavell</h1>
-                    <p>
-                        Computer Science Student at ASU, with experience in fast-paced
-                        and adaptive environments;
-                    </p>           
+                <div id="header-content" class="container">
+                    <div class="content">
+                        <h1>Caleb Leavell</h1>
+                            <p id="headline">
+                                Computer Science Student at ASU, with experience in fast-paced
+                                and adaptive environments.
+                            </p>
+                    </div>
+ 
+                </div>
             </header>
-            <nav>
+            <nav class="container">
                 <ul>
                     <li>
                         <a href="./index.html">Home</a>
@@ -33,6 +38,83 @@
                     </li>
                 </ul>
             </nav>
+            <main>
+                <div id="projects-container" class="container">
+                    <div class="content">
+                        <h2>Projects</h2>
+                        <div id="project-1-container" class="project-container container"> 
+                            <div class="content">
+                                <h3>Jatui</h3>
+                                <h4>2023 - 2025</h4>
+                                <div id="project-1-img" class="project-img"></div>
+                                <p>
+                                    Existing TUI libraries generally target raw terminals (handle user input every time a key is pressed). 
+                                    However, there are many applications that are simple enough to live in the default cooked terminal 
+                                    (handle user input when the user presses enter). Examples of these applications are:
+                                </p>
+                                <ul>
+                                    <li><strong>CLI Wizards</strong> (installation, configuration, setup flows)</li>
+                                    <li><strong>Menu-Driven Tools</strong> (interactive scripts, database helpers, git interfaces)</li>
+                                    <li><strong>Logic Prototyping</strong> (quickly testing algorithms or workflows)</li>
+                                    <li><strong>Simple REPLs</strong> (read-eval-print loops that don't need per-keystroke input)</li>
+                                    <li><strong>Text Adventures &amp; Games</strong> (turn-based input works well in cooked mode)</li>
+                                </ul>
+                                <p>
+                                    Jatui is a Java library that provides a framework for building TUIs that are meant to run in a 
+                                    cooked-terminal environment by implementing a modularized, declarative system that allows for reusable, 
+                                    customizable, and analyzable application units.
+                                </p>
+                            </div>
+                        </div>
+                        <div id="project-2-container" class="project-container container"> 
+                            <div class="content">
+                                <h3>Personal Finance App</h3>
+                                <h4>Spring 2025</h4>
+                                <div id="project-2-img" class="project-img"></div>
+                                 <ul>
+                                        <li>
+                                            Worked in a team of 3 to build and deploy a personal finance web application that allowed
+                                            registered users to view their net worth over time and get the latest stock news.
+                                        </li>
+                                        <li>
+                                            Built the application using the .NET framework and followed a microservice architecture that
+                                            integrated third-party and custom RESTful/WSDL APIs.
+                                        </li>
+                                        <li>
+                                            Implemented a custom XML/XSD user database with password encryption.                                
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>    
+                          <div id="project-3-container" class="project-container container">
+                                <div class="content">
+                                    <h3>Paint</h3>
+                                    <h4>Fall 2024</h4>
+                                    <div id="project-3-img" class="project-img"></div>
+                                    <ul>
+                                        <li>
+                                            Built and deployed a paint program in PyGame, including features such as undo/redo, a
+                                            continuous line system, and rendering optimizations that reduced time complexity from O(n^2) to
+                                            O(1) by only rendering new changes, while full redraws (e.g., after an undo) remained O(n^2).
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>                    
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div id="footer-container" class="container">
+                    <div id="footer-content" class="content">
+                        <p>
+                            <a href="mailto:cleavel1@asu.edu">cleavel1@asu.edu</a> | 
+                            <a href="https://www.linkedin.com/in/caleb-leavell">Linkedin</a> |
+                            <a href="https://github.com/Caleb-Leavell">GitHub</a>
+                        </p>
+                    </div>
+                </div>
+            </footer>
         </div>
     </body>
 </html>
+
