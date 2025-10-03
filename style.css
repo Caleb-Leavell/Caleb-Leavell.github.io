@@ -54,7 +54,7 @@ a:hover {
     padding: 0.5em 1em;
 }
 
-.button-link, .button-link:visited, .button-link:hover {
+.button-link, .button-link:link, .button-link:visited, .button-link:hover {
     display: inline-block;
     text-decoration: none;
     background-color: rgba(68, 91, 129, 0.788);
