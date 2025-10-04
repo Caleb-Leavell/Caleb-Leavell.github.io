@@ -121,10 +121,6 @@ nav ul {
     align-items: center;
 }
 
-main {
-    display: contents;
-}
-
 #about-me,
 #project-highlight-container {
     line-height: 2em;
@@ -162,6 +158,30 @@ main {
 
 .project-container {
     background-color: rgba(17, 28, 46, 0.5);
+}
+
+#skills-container {
+    background-color: rgba(17, 28, 46, 0.5);
+}
+
+#skills-table-container {
+    background-color: rgba(17, 28, 46, 0.5);
+}
+
+#skills-table {
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    padding: 1em;
+    width: 100%;
+}
+
+#skills-table tr:nth-of-type(odd) {
+    background-color: rgba(17, 28, 46, 0.5);
+}
+
+#skills-table tr:nth-of-type(even) {
+    background-color: rgba(34, 57, 94, 0.5);
 }
 
 footer {
