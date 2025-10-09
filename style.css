@@ -3,23 +3,24 @@
 }
 
 body {
-    --t-color: #eff1f4;
-    color: var(--t-color);
-    background-color: #28374b;
-    /* make the radial highlight fade to transparent so the background-color shows through */
+    --text: 221, 223, 244;
+    --background: 4, 6, 13;
+    --primary: 39, 55, 138;
+    --secondary: 24, 45, 151;
+    --accent: 61, 88, 225;
+
+
+    color: rgb(var(--text));
+    background-color: rgb(var(--background));
     background-image: radial-gradient(circle at center,
-        rgba(122, 156, 165, 0.774) 0%,
-        rgba(53, 72, 78, 0.3) 50%,
-        transparent 70%
+        rgba(var(--primary), 0.5) 0%,
+        rgb(var(--background)) 70%
     );
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    scrollbar-color: rgba(171, 218, 232, 0.2) transparent;
-    scrollbar-width: thin;
     padding: 1em;
     line-height: 2em;
 }
-
 
 h3 {
     font-weight: 200;
@@ -31,20 +32,19 @@ h1, h2, h3 {
 }
 
 a:link {
-        color: #587eb8;
+        color: color-mix(in srgb, rgb(var(--text)) 90%, blue 10%);
 }
 
 a:visited {
-        color: #6258b8;
+        color: color-mix(in srgb, rgb(var(--text)) 75%, blue 25%);
 }
 
 a:hover {
-        color: #6d97c7;
+        color: rgb(var(--text));
 }
 
 .container, .button-link {
     box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
     border-radius: 5px;
     margin-top: 1%;
     margin-bottom: 1%;
@@ -58,20 +58,19 @@ a:hover {
 .button-link, .button-link:link, .button-link:visited, .button-link:hover {
     display: inline-block;
     text-decoration: none;
-    background-color: rgba(68, 91, 129, 0.788);
+    background-color: rgba(var(--accent), 1);
     color: #eff1f4;
     padding: 1em 1.5em;
     border-radius: 50px;
     box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
     cursor: pointer;
     text-align: center;
-    transition: all 0.2s ease;
+    transition: all 0.1s ease;
 }
 
 .button-link:hover {
     transform: translateY(-1%) scale(1.02);
-    background-color: rgba(122, 137, 165, 0.774);
+    background-color: color-mix(in srgb, rgb(var(--accent)) 90%, white 10%);
 }
 
 header {
@@ -82,14 +81,14 @@ header {
     font-style: italic;
 }
 
-#header-content {
+#header-container {
     border-radius: 10px 10px 5px 5px;
-    background-color: rgba(17, 28, 46, 0.5);
+    box-shadow: none;
 }
 
 nav {
-    border-radius: 5px 5px 5px 5px;
-    background-color: rgba(26, 36, 53, 0.3);
+    border-radius: 5px;
+    background-color: rgba(var(--secondary), 1);
     height: 2.5em;
     line-height: 2.5em;
     grid-area: nav;
@@ -98,18 +97,16 @@ nav {
 nav a {
     text-decoration: none;
     font-size: 1.2em;
+    transition: font-weight 0.1s ease;
 }
 
-nav a:link {
-    color: #eff1f4;
-}
-
-nav a:visited {
-    color: #eff1f4;
+nav a:link, nav a:visited {
+    color: rgb(var(--text));
 }
 
 nav a:hover {
-    color: #4c6074;
+    color: color-mix(in srgb, rgb(var(--text)) 90%, black 10%);
+    font-weight: bold;
 }
 
 nav ul {
@@ -132,19 +129,19 @@ nav ul {
 #about-me {
     border-radius: 5px 5px 5px 10px;
     grid-area: about-me;
-    background-color: rgba(26, 36, 53, 0.5);
+    background-color: rgba(var(--primary), 0.1);
 }
 
 #project-highlight-container {
     grid-area: project-highlight;
-    background-color: rgba(17, 28, 46, 0.5);
     overflow-y: auto;
+    background-color: rgba(var(--secondary), 0.1);
 }
 
 .project-img {
     width: 100%;
     max-width: 360px;
-    aspect-ratio: 4 / 3; /* pick a ratio close to your image’s real one */
+    aspect-ratio: 4 / 3;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -155,7 +152,7 @@ nav ul {
 #project-3-img { background-image: url(res/paint.png); }
 
 #projects-container {
-    background-color: rgba(17, 28, 46, 0.5);
+    background-color: rgba(var(--secondary), 0.1);
     grid-area: projects;
 }
 
@@ -165,7 +162,7 @@ nav ul {
 }
 
 .project-container {
-    background-color: rgba(17, 28, 46, 0.5);
+    background-color: rgba(var(--primary), 0.5);
     flex: 50%;
     transition: all 0.3s ease;
     display: flex;
@@ -173,46 +170,54 @@ nav ul {
 }
 
 .project-container:hover {
-     background-color: rgba(35, 56, 89, 0.642);
+     background-color: rgba(var(--primary), 0.7);
      transform: translateY(-1%);
      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 #skills-container {
-    background-color: rgba(17, 28, 46, 0.5);
+    background-color: rgba(var(--primary), 0.1);
 }
 
 #skills-table-container {
-    background-color: rgba(17, 28, 46, 0.5);
+    background-color: rgba(var(--primary), 0.1);
 }
 
 #skills-table {
     margin-left: auto;
     margin-right: auto;
     border: none;
-    padding: 1em;
     width: 100%;
+    table-layout: fixed;
 }
 
-#skills-table thead {
-    background-color: rgba(34, 57, 94, 0.5);    
+#skills-table thead tr {
+    background-color: rgba(var(--primary), 0.2);
 }
 
-#skills-table tr:nth-of-type(odd), #skills-table-small tr:nth-of-type(odd) {
-    background-color: rgba(17, 28, 46, 0.5);
+#skills-table tbody tr:nth-of-type(odd), #skills-table-small tr:nth-of-type(odd) {
+    background-color: rgba(var(--secondary), 0.3);
 }
 
-#skills-table tr:nth-of-type(even), #skills-table-small tr:nth-of-type(even) {
-    background-color: rgba(34, 57, 94, 0.5);
+#skills-table tbody tr:nth-of-type(even), #skills-table-small tr:nth-of-type(even) {
+    background-color: rgba(var(--primary), 0.2);
+}
+
+#skills-table tr {
+    transition: transform 0.3s ease;
+}
+
+#skills-table tr:hover {
+    transform: scale(1.01);
 }
 
 #contact-container {
-    background-color: rgba(17, 28, 46, 0.5);
+    background-color: rgba(var(--primary), 0.1);
 }
 
 #contact-form-container {
     padding-top: 2%;
-    background-color: rgba(17, 28, 46, 0.5);
+    background-color: rgba(var(--primary), 0.2);
 }
 
 form {
@@ -220,22 +225,30 @@ form {
     margin-right: auto;
     width: 75%;
     display: grid;
-    columns: 5em auto;
+    grid-template-columns: 10em auto;
     gap: 1em;
 }
 
 .text-input {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(var(--background), 0.8);
     border: none;
     border-radius: 5px;
-    color: var(--t-color);
+    color: var(--text);
     min-height: 2em;
 }
 
+.text-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(var(--accent), 0.8);
+    background-color: rgba(var(--background), 0.95);
+}
+
 input[type="submit"] {
-    grid-column: 2;
-    width: 9em;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 75%;
     border: none;
+    font-weight: bold;
 }
 
 footer {
@@ -249,7 +262,7 @@ footer {
     line-height: normal;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(26, 36, 53, 0.3);
+    background-color: rgba(var(--secondary), 0.3);
     border-radius: 50px;
 }
 
@@ -263,7 +276,7 @@ footer {
 
 @media (max-width: 720px) {
     .small-only {
-        display: contents;
+        display: block;
     }
 
     .row {
