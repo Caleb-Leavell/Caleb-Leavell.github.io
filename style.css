@@ -89,14 +89,13 @@ header {
 nav {
     border-radius: 5px;
     background-color: rgba(var(--secondary), 1);
-    height: 2.5em;
-    line-height: 2.5em;
     grid-area: nav;
 }
 
 nav a {
     text-decoration: none;
     font-size: 1.2em;
+    line-height: 2.5em;
     transition: font-weight 0.1s ease;
 }
 
@@ -274,7 +273,41 @@ footer {
     display: none;
 }
 
+/* Base layout grid */
+.wrapper {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    grid-template-rows: auto auto auto;
+    gap: 1em;
+    grid-template-areas:
+        "header nav"
+        "content content"
+        "footer footer";
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Ensure nav stays compact and aligns with header */
+nav {
+    align-self: start;
+    margin-top: 1em; /* align with header content */
+}
+
+/* Content areas */
+main {
+    grid-area: content;
+    width: 100%;
+}
+
 @media (max-width: 720px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "content"
+            "footer";
+    }
     .small-only {
         display: block;
     }
