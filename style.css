@@ -128,7 +128,7 @@ nav ul {
 #about-me {
     border-radius: 5px 5px 5px 10px;
     grid-area: about-me;
-    background-color: rgba(var(--primary), 0.1);
+    background-color: rgba(var(--primary), 0.3);
 }
 
 #project-highlight-container {
